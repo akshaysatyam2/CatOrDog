@@ -20,9 +20,6 @@
       font-family: Arial, Helvetica, sans-serif;
       background-color: whitesmoke;
        }
-       body{
-        margin-top: 8%;
-       }
   </style>
 </head>
 
@@ -38,12 +35,12 @@
     Is the given image is of a Cat or a Dog?
   </p>
 <hr>
-  <form action="result" method="post">
+  <form action="result" method="post" enctype="multipart/form-data">
     {% csrf_token %}
 
     <div class="form-group">
       <h2 for="img">Submit your image: </h2>
-      <input type="file" name="img" class="form-control" accept="image/png, image/gif, image/jpeg" required>
+      <input type="file" name="checkImage" class="form-control" accept="image/png, image/gif, image/jpeg" required>
     </div>
 
 
